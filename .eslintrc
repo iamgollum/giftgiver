@@ -1,9 +1,14 @@
 {
   "plugins": ["jest"],
   "extends": ["airbnb", "plugin:jest/recommended"],
-  "ecmaFeatures": {
-    "jsx": true,
-    "modules": true
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
   },
   "env": {
     "browser": true,
@@ -17,8 +22,8 @@
     "quotes": [2, "double"],
     "react/prefer-es6-class": 0,
     "react/jsx-curly-spacing": [2, "always"],
+    "react/jsx-no-undef": 1,
     "no-unused-expressions": [2, { "allowShortCircuit": true }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }
-
 }
